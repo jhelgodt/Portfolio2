@@ -33,9 +33,6 @@ jobs:
       - name: Debug dist/portfolio2
         run: ls -la dist/portfolio2
 
-      - name: Debug deployed index.html
-        run: cat dist/portfolio2/index.html
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
