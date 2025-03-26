@@ -24,9 +24,18 @@ jobs:
       - name: Build Angular project
         run: npx ng build portfolio2 --configuration production
 
+      - name: Debug: Show contents of root
+        run: ls -la
+
+      - name: Debug: Show contents of dist/
+        run: ls -la dist
+
+      - name: Debug: Show contents of dist/portfolio2/
+        run: ls -la dist/portfolio2
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: /dist/portfolio2
+          publish_dir: dist/portfolio2
           cname: joakimhelgodt.com
