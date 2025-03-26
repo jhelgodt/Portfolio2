@@ -1,10 +1,16 @@
-$color-primary: #1e90ff;
-$color-bg-light: #f8f8f8;
-$color-bg-dark: #333;
-$color-text-dark: #222;
-$color-text-muted: #666;
-$color-text-light: #fff;
+// 🎨 Färger
+$color-primary: #007aff; // En mer modern blå (lik Apple blue)
+$color-accent: #ff6b6b; // En kontrastfärg för t.ex. call-to-actions
 
-$section-padding-top: 12rem;
-$section-padding-bottom: 11rem;
-$heading-margin-bottom: 3rem;
+$color-bg-light: #ffffff; // 👈 vit bakgrund
+$color-bg-dark: #121212;
+
+$color-text-dark: #111111; // lite mörkare än din nuvarande #222 för bättre kontrast
+$color-text-muted: #666;
+$color-text-light: #ffffff;
+$color-border: #e0e0e0;
+
+// 📐 Spacing
+$section-padding-top: 8rem;
+$section-padding-bottom: 8rem;
+$heading-margin-bottom: 2.5rem;

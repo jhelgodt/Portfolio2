@@ -1,45 +1,81 @@
 @use "variables" as *;
 
-@mixin hero-title {
-  font-size: 4rem;
+/* 🎯 Stor hero-titel */
+@mixin hero-title($align: center, $color: $color-text-dark) {
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
-  color: $color-text-dark;
-  text-align: center;
+  color: $color;
+  text-align: $align;
   margin-bottom: $heading-margin-bottom;
-
-  @media (max-width: 768px) {
-    font-size: 3rem;
-  }
+  line-height: 1.1;
 }
 
-@mixin section-title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: $color-text-dark;
-  text-align: center;
-  margin-bottom: $heading-margin-bottom;
-}
-
-@mixin subsection-title {
-  font-size: 2rem;
+/* 🧩 Sektionstitel */
+@mixin section-title($align: center, $color: $color-text-dark) {
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: $color-text-dark;
-  text-align: center;
+  color: $color;
+  text-align: $align;
+  margin-bottom: $heading-margin-bottom;
+  line-height: 1.2;
+}
+
+/* 🔹 Subsektionstitel */
+@mixin subsection-title($align: center, $color: $color-text-dark) {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  color: $color;
+  text-align: $align;
   margin-bottom: 2rem;
+  line-height: 1.3;
 }
 
-@mixin text-paragraph {
+/* 📄 Brödtext */
+@mixin text-paragraph($color: $color-text-muted) {
   font-size: 1.125rem;
-  color: $color-text-muted;
-  line-height: 1.75;
+  color: $color;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
-@mixin text-small {
+/* 🪶 Liten text */
+@mixin text-small($color: $color-text-muted) {
   font-size: 0.9rem;
-  color: $color-text-muted;
+  color: $color;
+  line-height: 1.5;
 }
 
+/* 📐 Padding för sektioner */
 @mixin section-padding {
   padding-top: $section-padding-top;
   padding-bottom: $section-padding-bottom;
+}
+
+/* 🔗 Navigationslänk (navbar) */
+@mixin nav-link($color: $color-text-muted) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $color;
+  text-transform: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+@mixin nav-link-resume {
+  background-color: $color-text-dark;
+  color: $color-text-light;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  line-height: 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-text-light;
+  }
 }

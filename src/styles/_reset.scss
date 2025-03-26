@@ -1,9 +1,20 @@
 @use "variables" as *;
 
-* {
+/* 🧹 Reset och normalisering */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* 🧱 HTML & Body */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -11,9 +22,11 @@ body {
   background-color: #ffffff;
   color: $color-text-dark;
   line-height: 1.6;
-  padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
+/* 🔗 Länkar */
 a {
   text-decoration: none;
   color: inherit;
@@ -24,7 +37,47 @@ a {
   }
 }
 
-img {
-  max-width: 100%;
+/* 🖼 Bilder */
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
+  max-width: 100%;
+}
+
+/* 🧍‍♂️ Form-element */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* 🔤 Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+/* 📏 Listor */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 📄 Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
