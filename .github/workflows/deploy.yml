@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: npx ng build --configuration production --output-path=dist/portfolio2
+        run: npx ng build --configuration production --output-path=dist/portfolio2 --output-index-path=dist/portfolio2/index.html
 
       - name: Debug root dir
         run: ls -la
@@ -33,16 +33,13 @@ jobs:
       - name: Debug dist/portfolio2
         run: ls -la dist/portfolio2
 
-      - name: Debug dist/portfolio2/browser
-        run: ls -la dist/portfolio2/browser
-
       - name: Debug deployed index.html
-        run: cat dist/portfolio2/browser/index.html
+        run: cat dist/portfolio2/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/portfolio2/browser
+          publish_dir: dist/portfolio2
           publish_branch: gh-pages
           cname: joakimhelgodt.com
