@@ -24,13 +24,13 @@ jobs:
       - name: Build Angular project
         run: npx ng build portfolio2 --configuration production
 
-      - name: Debug: Show contents of root
+      - name: Debug root dir
         run: ls -la
 
-      - name: Debug: Show contents of dist/
+      - name: Debug dist dir
         run: ls -la dist
 
-      - name: Debug: Show contents of dist/portfolio2/
+      - name: Debug dist/portfolio2
         run: ls -la dist/portfolio2
 
       - name: Deploy to GitHub Pages
