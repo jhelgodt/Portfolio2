@@ -1,0 +1,62 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.hero {
+  @include section-padding;
+
+  &__title {
+    @include hero-title;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__image-wrapper {
+    flex-shrink: 0;
+    max-width: 250px;
+
+    @media (min-width: 768px) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  &__text {
+    max-width: 600px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    @include subsection-title(left);
+  }
+
+  &__description {
+    @include text-paragraph;
+  }
+}
+.hero__image {
+  width: 240px;
+  height: 240px;
+  border-radius: 40%; // 💫 Gör den helt rund
+  object-fit: cover; // ⚠️ Beskär den snyggt i cirkeln
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Valfritt
+}
