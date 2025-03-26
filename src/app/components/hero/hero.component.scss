@@ -60,3 +60,21 @@
   object-fit: cover; // ⚠️ Beskär den snyggt i cirkeln
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Valfritt
 }
+.hero__title-group {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  img {
+    display: block;
+    margin: 0 auto;
+
+    &.hero__name-img {
+      max-width: clamp(220px, 40vw, 380px);
+    }
+
+    &.hero__role-img {
+      max-width: clamp(180px, 30vw, 320px);
+      margin-top: 1rem;
+    }
+  }
+}
