@@ -1,0 +1,74 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.navbar {
+  background-color: $color-bg-light;
+  border-bottom: 1px solid $color-bg-dark;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-img {
+    height: 40px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $color-bg-light;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    color: $color-text-dark;
+
+    &--resume {
+      color: $color-primary;
+      border: 1px solid $color-primary;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    & .navbar__icon {
+      width: 24px;
+      height: 24px;
+      color: $color-text-dark;
+    }
+  }
+}
