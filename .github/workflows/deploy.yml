@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: npx ng build portfolio2 --configuration production
+        run: npx ng build --configuration production --output-path=dist/portfolio2
 
       - name: Debug root dir
         run: ls -la
@@ -32,6 +32,9 @@ jobs:
 
       - name: Debug dist/portfolio2
         run: ls -la dist/portfolio2
+
+      - name: Debug dist/portfolio2/browser
+        run: ls -la dist/portfolio2/browser
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
