@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Angular project
-        run: npx ng build --configuration production --output-path=dist/portfolio2 --output-index-path=dist/portfolio2/index.html
+        run: npx ng build --configuration production --output-path=dist/portfolio2
 
       - name: Debug root dir
         run: ls -la
