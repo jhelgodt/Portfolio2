@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  color: $color-text-dark;
+  line-height: 1.6;
+  padding-top: 5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

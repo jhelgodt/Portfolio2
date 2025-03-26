@@ -1,0 +1,45 @@
+@use "variables" as *;
+
+@mixin hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: $color-text-dark;
+  text-align: center;
+  margin-bottom: $heading-margin-bottom;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+@mixin section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: $color-text-dark;
+  text-align: center;
+  margin-bottom: $heading-margin-bottom;
+}
+
+@mixin subsection-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-text-dark;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@mixin text-paragraph {
+  font-size: 1.125rem;
+  color: $color-text-muted;
+  line-height: 1.75;
+}
+
+@mixin text-small {
+  font-size: 0.9rem;
+  color: $color-text-muted;
+}
+
+@mixin section-padding {
+  padding-top: $section-padding-top;
+  padding-bottom: $section-padding-bottom;
+}
