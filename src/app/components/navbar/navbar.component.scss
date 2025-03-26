@@ -9,9 +9,9 @@
   z-index: 1000;
 
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,7 +24,7 @@
   &__menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
 
     @media (max-width: 768px) {
       display: none;
