@@ -33,10 +33,12 @@ jobs:
       - name: Debug dist/portfolio2
         run: ls -la dist/portfolio2
 
+      - name: Debug dist/portfolio2/browser
+        run: ls -la dist/portfolio2/browser
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/portfolio2
-          publish_branch: gh-pages
+          publish_dir: dist/portfolio2/browser
           cname: joakimhelgodt.com
