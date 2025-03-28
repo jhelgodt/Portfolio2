@@ -70,6 +70,9 @@
 
     &.hero__name-img {
       max-width: clamp(220px, 40vw, 380px);
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     &.hero__role-img {
