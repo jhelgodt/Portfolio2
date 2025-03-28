@@ -9,7 +9,7 @@
   }
 
   .subsection-title {
-    @include subsection-title(left);
+    @include subsection-title;
   }
 
   .education__grid,

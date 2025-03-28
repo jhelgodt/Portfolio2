@@ -50,6 +50,10 @@
   padding-top: $section-padding-top;
   padding-bottom: $section-padding-bottom;
 }
+@mixin hero-padding {
+  padding-top: calc($section-padding-top + 8rem);
+  padding-bottom: $section-padding-bottom;
+}
 
 /* 🔗 Navigationslänk (navbar) */
 @mixin nav-link($color: $color-text-muted) {
