@@ -74,6 +74,6 @@
   }
 
   .subsection {
-    margin-bottom: 4rem;
+    @include subsection;
   }
 }
