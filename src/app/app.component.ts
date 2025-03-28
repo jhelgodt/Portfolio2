@@ -2,11 +2,17 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { ProfessionalJourneyComponent } from './components/professional-journey/professional-journey.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent],
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    HeroComponent,
+    ProfessionalJourneyComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
