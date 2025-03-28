@@ -1,0 +1,71 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.projects {
+  @include section-padding;
+  background-color: $color-bg-light;
+  text-align: center;
+  .section-title {
+    @include section-title;
+  }
+  &__grid {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 2rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: $color-text-dark;
+  }
+
+  &__description {
+    @include text-paragraph;
+    margin-bottom: 0.75rem;
+  }
+
+  &__info {
+    @include text-small;
+    margin-bottom: 1rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__link {
+    @include nav-link-resume;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}

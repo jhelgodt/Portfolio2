@@ -1,0 +1,28 @@
+<section id="projects" class="projects">
+  <h1 class="section-title">PROJECTS</h1>
+
+  <div class="projects__grid">
+    <div *ngFor="let project of projects" class="projects__card">
+      <a [href]="project.liveLink" target="_blank" rel="noopener noreferrer">
+        <img
+          [src]="project.image"
+          [alt]="project.title"
+          class="projects__image"
+        />
+      </a>
+      <div class="projects__content">
+        <h3 class="projects__name">{{ project.title }}</h3>
+        <p class="projects__description">{{ project.description }}</p>
+        <p class="projects__info"><strong>Role:</strong> {{ project.role }}</p>
+        <div class="projects__links">
+          <a [href]="project.githubLink" target="_blank" class="projects__link"
+            >GitHub</a
+          >
+          <a [href]="project.liveLink" target="_blank" class="projects__link"
+            >Live Site</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

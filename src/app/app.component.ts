@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ProfessionalJourneyComponent } from './components/professional-journey/professional-journey.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { ProfessionalJourneyComponent } from './components/professional-journey/
     NavbarComponent,
     HeroComponent,
     ProfessionalJourneyComponent,
+    ProjectsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
