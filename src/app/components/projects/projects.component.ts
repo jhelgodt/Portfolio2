@@ -11,20 +11,20 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'Portfolio Website',
-      description: 'A responsive personal portfolio built with Angular.',
-      role: 'Solo Project',
-      image: 'assets/header.svg',
-      githubLink: 'https://github.com/jhelgodt/portfolio2',
-      liveLink: 'https://joakimhelgodt.com/',
-    },
-    {
       title: 'Magic Deck Tracker',
       description: 'A card tracking app using Scryfall API.',
       role: 'Solo Project',
       image: 'assets/mtg-project.jpg',
       githubLink: 'https://github.com/jhelgodt/magic-deck-tracker',
       liveLink: '#',
+    },
+    {
+      title: 'Portfolio Website',
+      description: 'A responsive personal portfolio built with Angular.',
+      role: 'Solo Project',
+      image: 'assets/header.svg',
+      githubLink: 'https://github.com/jhelgodt/portfolio2',
+      liveLink: 'https://joakimhelgodt.com/',
     },
   ];
 }
