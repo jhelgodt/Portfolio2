@@ -15,8 +15,8 @@ export class ProjectsComponent {
       description: 'A card tracking app using Scryfall API.',
       role: 'Solo Project',
       image: 'assets/mtg-project.jpg',
-      githubLink: 'https://github.com/jhelgodt/magic-deck-tracker',
-      liveLink: '#',
+      githubLink: 'https://github.com/jhelgodt/Magic-Project',
+      liveLink: 'https://jhelgodt.github.io/Magic-Project',
     },
     {
       title: 'Portfolio Website',
