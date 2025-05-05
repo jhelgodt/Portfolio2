@@ -12,19 +12,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 2rem;
+    padding: 0 1.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1000px) {
       flex-direction: row;
       align-items: flex-start;
       justify-content: center;
+      gap: 3rem;
+      padding: 0 3rem;
     }
   }
 
   &__image-wrapper {
     flex-shrink: 0;
-    max-width: 250px;
+    max-width: 240px;
 
     @media (min-width: 768px) {
       margin-right: 2rem;
@@ -36,8 +42,21 @@
     border-radius: 12px;
   }
 
+  &__text-video {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+
+    @media (min-width: 1000px) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+
   &__text {
-    max-width: 600px;
+    flex: 0.5;
     text-align: center;
 
     @media (min-width: 768px) {
@@ -52,14 +71,46 @@
   &__description {
     @include text-paragraph;
   }
+
+  &__video-wrapper {
+    flex: 1;
+    max-width: 280px;
+    height: 350px;
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+    @media (max-width: 1000px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__video-crop {
+    transform: translateY(
+      -120px
+    ); // Justera hur mycket du vill flytta videon uppåt
+  }
+
+  &__video {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: none;
+    background-color: #000;
+  }
 }
+
 .hero__image {
-  width: 240px;
-  height: 240px;
-  border-radius: 40%; // 💫 Gör den helt rund
-  object-fit: cover; // ⚠️ Beskär den snyggt i cirkeln
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Valfritt
+  width: 280px;
+  height: 280px;
+  border-radius: 40%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .hero__title-group {
   text-align: center;
   margin-bottom: 2rem;
@@ -70,7 +121,7 @@
 
     &.hero__name-img {
       max-width: clamp(220px, 40vw, 380px);
-      @media (max-width: 768px) {
+      @media (max-width: 1000px) {
         display: none;
       }
     }

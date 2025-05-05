@@ -17,8 +17,9 @@
     />
   </div>
 
-  <!-- Bild + Beskrivning -->
+  <!-- Bild + Text + Video -->
   <div class="hero__content">
+    <!-- Profilbild -->
     <div class="hero__image-wrapper">
       <img
         src="assets/profile.jpg"
@@ -29,15 +30,35 @@
       />
     </div>
 
-    <div class="hero__text">
-      <p class="hero__description">
-        I'm a fullstack web developer with a strong background in SaaS and
-        tech-driven business. After years of helping companies grow through
-        strategic B2B sales and partnerships, I now design and build modern web
-        applications using Angular, React, Laravel, and Node.js. With hands-on
-        experience in both frontend and backend development, I bridge the gap
-        between business needs and scalable technical solutions.
-      </p>
+    <!-- Text + Video -->
+    <div class="hero__text-video">
+      <div class="hero__text">
+        <p class="hero__description">
+          I'm a fullstack web developer with a strong background in SaaS and
+          tech-driven business. After years of helping companies grow through
+          strategic B2B sales and partnerships, I now design and build modern
+          web applications using Angular, React, Laravel, and Node.js. With
+          hands-on experience in both frontend and backend development, I bridge
+          the gap between business needs and scalable technical solutions.
+        </p>
+      </div>
+
+      <figure class="hero__video-wrapper">
+        <div class="hero__video-crop">
+          <video
+            class="hero__video"
+            src="assets/intro.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/video-poster.png"
+            controlsList="nofullscreen"
+            disablepictureinpicture
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </figure>
     </div>
   </div>
 </section>
